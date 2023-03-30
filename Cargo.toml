@@ -1,0 +1,17 @@
+[package]
+name = "imxrt1064-rs-template"
+version = "0.1.0"
+authors = [ "90degs2infty 90degs2infty@posteo.org" ]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+imxrt-hal = { version = "0.5", features = ["imxrt1064"] }
+imxrt-ral = { version = "0.5", features = ["imxrt1064", "rt"] }
+imxrt-rt = { version = "0.1.1", features = ["device"] }
+imxrt1064-fcb = { version = "0.1", git = "https://github.com/90degs2infty/imxrt1064-fcb.git", branch = "feature_initial-implementation" }
+panic-halt = { version = "0.2" }
+
+[build-dependencies]
+imxrt-rt = { version = "0.1.1", features = ["device"] }
