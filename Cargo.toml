@@ -10,7 +10,7 @@ edition = "2021"
 imxrt-hal = { version = "0.5", features = ["imxrt1064"] }
 imxrt-ral = { version = "0.5", features = ["imxrt1064", "rt"] }
 imxrt-rt = { version = "0.1.1", features = ["device"] }
-imxrt1064-fcb = { version = "0.1", git = "https://github.com/90degs2infty/imxrt1064-fcb.git", branch = "feature_initial-implementation" }
+imxrt1064-fcb = { version = "0.1", git = "https://github.com/90degs2infty/imxrt1064-fcb.git" }
 panic-halt = { version = "0.2" }
 
 [build-dependencies]
