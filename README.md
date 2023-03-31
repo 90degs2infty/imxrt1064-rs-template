@@ -29,8 +29,16 @@ In the following, let `$firmware` and `$openocd_dir` denote the binary file buil
 Flashing is a matter of
 
 ```bash
-$openocd_dir/bin/imxrt-openocd -f $openocd_dir/share/openocd/scripts/interface/cmsis-dap.cfg -f $openocd_dir/share/openocd/scripts/target/imxrt.cfg -c "program $firmware 0x0 verify"
+$openocd_dir/bin/imxrt-openocd -c "adapter speed 500" -f $openocd_dir/share/openocd/scripts/interface/cmsis-dap.cfg -f $openocd_dir/share/openocd/scripts/target/imxrt.cfg -c "program $firmware 0x0 verify" -c "shutdown"
 ```
+
+Depending on your setup, you may have to specify the flashdriver's path explicitly.
+Specification can be done e.g. by prepending `-c "set FLASHDRIVER $openocd_dir/flashdrivers/iMXRT1064_Internal_ROMAPI.elf"` to the above argument list.
+
+## Running
+
+After flashing, reset your board.
+The user LED (located roughly in the middle of the board) should light up.
 
 ## License
 
