@@ -31,3 +31,7 @@ Flashing is a matter of
 ```bash
 $openocd_dir/bin/imxrt-openocd -f $openocd_dir/share/openocd/scripts/interface/cmsis-dap.cfg -f $openocd_dir/share/openocd/scripts/target/imxrt.cfg -c "program $firmware 0x0 verify"
 ```
+
+## License
+
+MIT License
